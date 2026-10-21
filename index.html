@@ -3,201 +3,255 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex">
-<meta name="description" content="Dream Deals Properties: ausgewählte Residenzen in Dubai, Beratung auf Deutsch, Englisch und Albanisch.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Dream Deals Properties: Dubais beste Adressen, bevor sie auf den Markt kommen. Direkter Entwicklerzugang, selbst investiert, international beratend.">
+<meta property="og:title" content="Dream Deals Properties">
+<meta property="og:description" content="Dubais beste Adressen, bevor sie auf den Markt kommen.">
+<meta property="og:image" content="https://adrianocelentano31.github.io/dream-deals-draft/img/hero-poster.jpg">
+<meta property="og:type" content="website">
 <title>Dream Deals Properties</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
 <style>
-  /* Layout: full-bleed video hero, then alternating sand / navy bands; content column 1180px, 65ch running text */
+  /* Layout: full-bleed video hero, alternating sand / navy bands, 1200px column, 65ch running text, single committed light look with navy sections */
   :root{
-    --navy:#0F1B3D; --navy-2:#162552; --sand:#F4EFE8; --sand-2:#EAE2D6; --ink:#1C1A17; --ink-2:#5A554C;
-    --champ:#C9B08A; --champ-2:#B39A72; --white:#FFFFFF;
-    --display:"Cormorant Garamond", "Times New Roman", Georgia, serif;
-    --body:"Jost", "Helvetica Neue", Arial, sans-serif;
-    --script:"Pinyon Script", "Brush Script MT", cursive;
-    --gutter-l:max(16px, env(safe-area-inset-left, 0px));
-    --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+    --navy:#0F1B3D; --navy-2:#162552; --navy-3:#0A1430;
+    --sand:#F4EFE8; --sand-2:#EAE2D6; --ink:#1C1A17; --ink-2:#5A554C;
+    --champ:#C9B08A; --champ-text:#85683F; --white:#FFFFFF;
+    --display:"Cormorant Garamond","Times New Roman",Georgia,serif;
+    --body:"Jost","Helvetica Neue",Arial,sans-serif;
+    --script:"Pinyon Script","Brush Script MT",cursive;
+    --gl:max(16px, env(safe-area-inset-left, 0px));
+    --gr:max(16px, env(safe-area-inset-right, 0px));
     color-scheme: light;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--sand);color:var(--ink);font-family:var(--body);font-weight:300;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
   body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--navy)}
-  @media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important} html{scroll-behavior:auto} }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
-  h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
-  h1{font-size:clamp(2.6rem,6.2vw,5.2rem);letter-spacing:.005em}
-  h2{font-size:clamp(2rem,3.8vw,3.2rem)}
-  h3{font-size:1.5rem}
+  h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;margin:0;text-wrap:balance;font-variant-numeric:lining-nums}
+  h1{font-size:clamp(2.5rem,5.6vw,4.9rem)}
+  h2{font-size:clamp(2rem,3.6vw,3.1rem)}
+  h3{font-size:1.45rem}
+  h1 em,h2 em{font-style:italic;font-weight:300;color:var(--champ)}
   p{margin:0}
   a{color:inherit}
-  .script{font-family:var(--script);font-weight:400;color:var(--champ)}
-  .eyebrow{font-family:var(--body);font-weight:500;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--champ-2)}
+  .num{font-variant-numeric:lining-nums tabular-nums}
+  .eyebrow{font-family:var(--body);font-weight:500;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--champ-text)}
   .on-navy .eyebrow{color:var(--champ)}
-  .lede{font-size:1.15rem;max-width:62ch;color:var(--ink-2)}
+  .lede{font-size:1.12rem;max-width:62ch;color:var(--ink-2)}
   .on-navy .lede{color:rgba(255,255,255,.78)}
-  .wrap{max-width:1180px;margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
-  .band{padding-block:clamp(72px,9vw,128px)}
+  .wrap{max-width:1200px;margin:0 auto;padding-left:var(--gl);padding-right:var(--gr)}
+  .band{padding-block:clamp(72px,8.5vw,120px)}
   .on-navy{background:var(--navy);color:var(--white)}
   .on-sand2{background:var(--sand-2)}
   .stack{display:grid;gap:18px}
-  .cols{display:grid;gap:32px;align-items:start}
-  @media (min-width:860px){ .cols-2{grid-template-columns:1fr 1fr} .cols-3{grid-template-columns:repeat(3,1fr)} .cols-4{grid-template-columns:repeat(4,1fr)} }
-  .cols > *{min-width:0}
+  .head{display:grid;gap:16px;margin-bottom:44px}
+  @media (min-width:900px){.head.split{grid-template-columns:1fr auto;align-items:end}}
   [data-lang] [data-en]{display:none}
   [data-lang="en"] [data-en]{display:revert}
   [data-lang="en"] [data-de]{display:none}
 
-  /* Buttons */
-  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--body);font-weight:500;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;padding:16px 26px;border:1px solid currentColor;border-radius:999px;transition:background .25s,color .25s,transform .25s;cursor:pointer;background:transparent;color:inherit}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:500;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;padding:16px 26px;border:1px solid currentColor;border-radius:999px;transition:background .25s,color .25s,transform .25s;cursor:pointer;background:transparent;color:inherit;white-space:nowrap}
   .btn:hover{transform:translateY(-1px)}
   .btn:focus-visible{outline:2px solid var(--champ);outline-offset:3px}
   .btn-solid{background:var(--champ);border-color:var(--champ);color:var(--navy)}
   .btn-solid:hover{background:var(--white);border-color:var(--white)}
   .btn-navy{background:var(--navy);border-color:var(--navy);color:var(--white)}
   .btn-navy:hover{background:var(--navy-2)}
-  .btn-wa svg{width:18px;height:18px}
+  .btn svg{width:18px;height:18px;flex:none}
 
   /* Nav */
   .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--navy);color:var(--white)}
-  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
-  .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
-  .mono{width:42px;height:42px;border-radius:50%;background:var(--navy-2);display:grid;place-items:center;border:1px solid rgba(255,255,255,.18)}
-  .mono svg{width:30px;height:30px}
-  .brand-name{font-family:var(--display);font-size:1.05rem;letter-spacing:.22em;text-transform:uppercase;line-height:1}
-  .brand-tag{font-family:var(--script);font-size:1rem;color:var(--champ);line-height:1;margin-top:3px}
-  .nav-links{display:none;gap:28px;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:400}
-  .nav-links a{text-decoration:none;color:rgba(255,255,255,.82)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;height:70px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
+  .mono{width:40px;height:40px;border-radius:50%;background:var(--navy-2);display:grid;place-items:center;border:1px solid rgba(255,255,255,.18);flex:none}
+  .mono svg{width:28px;height:28px}
+  .brand-name{font-family:var(--display);font-size:1rem;letter-spacing:.2em;text-transform:uppercase;line-height:1}
+  .brand-tag{font-family:var(--script);font-size:.98rem;color:var(--champ);line-height:1;margin-top:4px}
+  .nav-links{display:none;gap:26px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:400}
+  .nav-links a{text-decoration:none;color:rgba(255,255,255,.82);white-space:nowrap}
   .nav-links a:hover{color:var(--champ)}
-  @media (min-width:960px){ .nav-links{display:flex} }
-  .nav-right{display:flex;align-items:center;gap:14px}
+  @media (min-width:1180px){.nav-links{display:flex}}
+  .nav-right{display:flex;align-items:center;gap:12px}
+  .nav-right .btn{display:none;padding:10px 16px;font-size:.68rem}
+  @media (min-width:700px){.nav-right .btn{display:inline-flex}}
   .lang{display:inline-flex;border:1px solid rgba(255,255,255,.3);border-radius:999px;overflow:hidden}
-  .lang button{background:transparent;color:rgba(255,255,255,.7);border:0;padding:7px 12px;font:inherit;font-size:.72rem;letter-spacing:.18em;cursor:pointer}
+  .lang button{background:transparent;color:rgba(255,255,255,.7);border:0;padding:7px 12px;font:inherit;font-size:.7rem;letter-spacing:.18em;cursor:pointer}
   .lang button[aria-pressed="true"]{background:var(--champ);color:var(--navy)}
   .lang button:focus-visible{outline:2px solid var(--champ);outline-offset:-2px}
-  .draft{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--champ);border:1px dashed var(--champ);border-radius:999px;padding:4px 9px;opacity:.85}
-  @media (max-width:520px){ .draft{display:none} .brand-tag{display:none} }
+  @media (max-width:560px){.brand-tag{display:none}.brand-name{font-size:.76rem;letter-spacing:.1em}.nav .wrap{gap:10px}.brand{gap:9px;min-width:0}.mono{width:34px;height:34px}.lang button{padding:6px 9px}}
 
   /* Hero */
-  .hero{position:relative;min-height:min(92vh,860px);display:grid;align-items:end;background:var(--navy);color:var(--white);overflow:hidden;isolation:isolate}
-  .hero video,.hero img.fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(15,27,61,.25) 0%,rgba(15,27,61,.05) 40%,rgba(15,27,61,.78) 100%)}
-  .hero .wrap{width:100%;padding-block:clamp(56px,9vw,120px) clamp(48px,7vw,88px);display:grid;gap:26px}
-  .hero h1 .script{font-size:1.05em;color:var(--champ)}
-  .hero .sub{font-size:1.1rem;max-width:56ch;color:rgba(255,255,255,.85)}
+  .hero{position:relative;min-height:min(90vh,820px);display:grid;align-items:end;background:var(--navy);color:var(--white);overflow:hidden;isolation:isolate}
+  .hero video,.hero .fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+  .hero .fallback{background:url(img/hero-poster.jpg) center/cover no-repeat;animation:kb 28s ease-in-out infinite alternate}
+  @keyframes kb{from{transform:scale(1)}to{transform:scale(1.1)}}
+  .hero.playing .fallback{display:none}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(15,27,61,.72) 0%,rgba(15,27,61,.35) 55%,rgba(15,27,61,.1) 100%),linear-gradient(180deg,rgba(15,27,61,.2) 0%,rgba(15,27,61,0) 35%,rgba(15,27,61,.75) 100%)}
+  .hero .wrap{width:100%;padding-block:clamp(56px,9vw,120px) clamp(48px,7vw,80px);display:grid;gap:24px}
+  .hero .sub{font-size:1.1rem;max-width:58ch;color:rgba(255,255,255,.88)}
   .hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
-  .hero .scroll{position:absolute;right:max(24px,env(safe-area-inset-right,0px));bottom:28px;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.6);writing-mode:vertical-rl;display:none}
-  @media (min-width:960px){ .hero .scroll{display:block} }
   .reveal{animation:rise 1.1s cubic-bezier(.2,.7,.2,1) both}
   .reveal.d1{animation-delay:.15s}.reveal.d2{animation-delay:.3s}.reveal.d3{animation-delay:.45s}
   @keyframes rise{from{opacity:.001;transform:translateY(18px)}to{opacity:1;transform:none}}
 
-  /* Trust bar */
+  /* Trust */
   .trust{background:var(--white);border-bottom:1px solid var(--sand-2)}
-  .trust .wrap{display:grid;gap:28px;padding-block:34px}
-  @media (min-width:860px){ .trust .wrap{grid-template-columns:1.1fr 1fr;align-items:center} }
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .stat{display:grid;gap:4px}
-  .stat b{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,3.4vw,2.6rem);color:var(--champ-2);line-height:1;font-variant-numeric:tabular-nums}
-  .stat span{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
-  .partners{display:grid;gap:10px}
-  .partners .eyebrow{color:var(--ink-2)}
-  .logos{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:baseline}
-  .logos span{font-family:var(--display);font-size:1.25rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.72}
+  .trust .wrap{display:grid;gap:22px;padding-block:34px}
+  .claims{display:grid;gap:22px}
+  @media (min-width:700px){.claims{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1000px){.claims{grid-template-columns:repeat(4,1fr)}}
+  .claim{display:grid;gap:6px;border-left:1px solid var(--champ);padding-left:16px;align-content:start}
+  .claim b{font-family:var(--display);font-weight:500;font-size:1.3rem;line-height:1.15;color:var(--navy)}
+  .claim span{font-size:.92rem;color:var(--ink-2)}
+  .partners{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 28px;border-top:1px solid var(--sand-2);padding-top:18px}
+  .partners .eyebrow{color:var(--ink-2);margin-right:6px}
+  .partners span.wm{font-family:var(--display);font-size:1.3rem;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);opacity:.75;white-space:nowrap}
 
-  /* Paths */
+  /* Segment cards */
   .paths{display:grid;gap:22px}
-  @media (min-width:860px){ .paths{grid-template-columns:repeat(3,1fr)} }
-  .path{position:relative;display:grid;grid-template-rows:auto 1fr;background:var(--white);overflow:hidden;min-height:520px;text-decoration:none;color:var(--ink)}
+  @media (min-width:900px){.paths{grid-template-columns:repeat(3,1fr)}}
+  .path{display:grid;grid-template-rows:auto 1fr;background:var(--white);overflow:hidden;text-decoration:none;color:var(--ink)}
   .path figure{margin:0;aspect-ratio:4/3;max-width:100%;overflow:hidden}
   .path img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
   .path:hover img{transform:scale(1.04)}
   .path .body{display:grid;gap:12px;padding:26px 26px 30px;align-content:start}
   .path .range{font-family:var(--display);font-size:1.6rem;color:var(--navy)}
-  .path .cta{margin-top:auto;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--champ-2);display:flex;align-items:center;gap:10px}
-  .path .cta::after{content:"";width:34px;height:1px;background:currentColor;transition:width .3s}
+  .path .cta{margin-top:auto;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--champ-text);display:flex;align-items:center;gap:10px}
+  .path .cta::after{content:"";width:34px;height:1px;background:currentColor;transition:width .3s;flex:none}
   .path:hover .cta::after{width:56px}
 
-  /* Featured project */
-  .feat-head{display:grid;gap:18px;margin-bottom:40px}
-  @media (min-width:860px){ .feat-head{grid-template-columns:1fr auto;align-items:end} }
-  .gallery{display:grid;grid-auto-flow:column;grid-auto-columns:min(78vw,520px);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;scrollbar-width:thin;scrollbar-color:var(--champ) transparent;margin-left:calc(-1 * var(--gutter-l));margin-right:calc(-1 * var(--gutter-r));padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+  /* Projects */
+  .filters{display:flex;flex-wrap:wrap;gap:8px}
+  .filters button{font:inherit;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;padding:9px 14px;border:1px solid rgba(255,255,255,.3);background:transparent;color:rgba(255,255,255,.8);border-radius:999px;cursor:pointer}
+  .filters button[aria-pressed="true"]{background:var(--champ);border-color:var(--champ);color:var(--navy)}
+  .filters button:focus-visible{outline:2px solid var(--champ);outline-offset:2px}
+  .projects{display:grid;gap:22px}
+  @media (min-width:700px){.projects{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1000px){.projects{grid-template-columns:repeat(3,1fr)}}
+  .project{display:grid;grid-template-rows:auto 1fr;background:var(--navy-2);color:var(--white);overflow:hidden;text-decoration:none}
+  .project figure{margin:0;aspect-ratio:3/2;max-width:100%;overflow:hidden;position:relative}
+  .project img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+  .project:hover img{transform:scale(1.04)}
+  .project .dev{position:absolute;left:14px;top:14px;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;background:rgba(15,27,61,.78);color:var(--champ);padding:6px 10px}
+  .project .body{display:grid;gap:10px;padding:22px 22px 24px;align-content:start}
+  .project h3{font-size:1.55rem}
+  .project .loc{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+  .project .meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;border-top:1px solid rgba(255,255,255,.14);padding-top:12px;margin-top:4px}
+  .project .meta b{display:block;font-family:var(--display);font-weight:400;font-size:1.25rem;color:var(--champ);line-height:1.1}
+  .project .meta span{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .project .cta{margin-top:auto;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--champ);display:flex;align-items:center;gap:10px;padding-top:10px}
+  .project .cta::after{content:"";width:30px;height:1px;background:currentColor;flex:none}
+  .project[hidden]{display:none}
+
+  /* Gallery (featured) */
+  .gal-wrap{position:relative}
+  .gallery{display:grid;grid-auto-flow:column;grid-auto-columns:min(78vw,520px);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gl);padding-bottom:14px;scrollbar-width:none;margin-left:calc(-1 * var(--gl));margin-right:calc(-1 * var(--gr));padding-left:var(--gl);padding-right:var(--gr)}
+  .gallery::-webkit-scrollbar{display:none}
   .gallery figure{margin:0;scroll-snap-align:start;display:grid;gap:10px}
   .gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;max-width:100%}
-  .gallery figcaption{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
-  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 20px;margin-top:44px}
-  @media (min-width:860px){ .facts{grid-template-columns:repeat(4,1fr)} }
-  .fact{display:grid;gap:6px;border-top:1px solid rgba(255,255,255,.18);padding-top:14px}
-  .fact b{font-family:var(--display);font-weight:400;font-size:2rem;line-height:1;color:var(--champ);font-variant-numeric:tabular-nums}
-  .fact span{font-size:.78rem;letter-spacing:.08em;color:rgba(255,255,255,.78)}
-  .feat-note{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-  .feat-note small{font-size:.74rem;color:rgba(255,255,255,.55);max-width:60ch}
+  .gallery figcaption{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+  .arrows{display:none;gap:8px;justify-content:flex-end;margin-top:6px}
+  @media (min-width:900px){.arrows{display:flex}}
+  .arrows button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:transparent;color:var(--white);cursor:pointer;font-size:1.2rem;line-height:1}
+  .arrows button:hover{border-color:var(--champ);color:var(--champ)}
+  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 20px;margin-top:40px}
+  @media (min-width:900px){.facts{grid-template-columns:repeat(4,1fr)}}
+  .fact{display:grid;gap:6px;border-top:1px solid rgba(255,255,255,.18);padding-top:14px;align-content:start}
+  .fact b{font-family:var(--display);font-weight:400;font-size:2rem;line-height:1;color:var(--champ);font-variant-numeric:lining-nums tabular-nums}
+  .fact span{font-size:.8rem;letter-spacing:.06em;color:rgba(255,255,255,.78)}
+  .note{font-size:.74rem;color:rgba(255,255,255,.5);max-width:70ch;margin-top:26px}
+
+  /* Residences */
+  .res-grid{display:grid;gap:16px}
+  @media (min-width:700px){.res-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1000px){.res-grid{grid-template-columns:repeat(3,1fr)}}
+  .res{display:grid;gap:10px}
+  .res figure{margin:0;aspect-ratio:3/2;max-width:100%;overflow:hidden;background:var(--sand-2)}
+  .res img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+  .res:hover img{transform:scale(1.03)}
+  .res b{font-family:var(--display);font-weight:500;font-size:1.25rem;color:var(--navy)}
+  .res span{font-size:.92rem;color:var(--ink-2)}
+  .spec{display:grid;gap:14px;grid-template-columns:repeat(2,1fr);margin-top:40px;border-top:1px solid var(--champ);padding-top:24px}
+  @media (min-width:900px){.spec{grid-template-columns:repeat(4,1fr)}}
+  .spec div{display:grid;gap:4px;align-content:start}
+  .spec b{font-family:var(--display);font-weight:500;font-size:1.15rem;color:var(--navy)}
+  .spec span{font-size:.86rem;color:var(--ink-2)}
+
+  /* Numbers on map */
+  .numbers{position:relative;color:var(--white);isolation:isolate;overflow:hidden;background:var(--navy)}
+  .numbers::before{content:"";position:absolute;inset:0;z-index:-2;background:url(img/bg-map.jpg) center/cover no-repeat;filter:blur(2px);transform:scale(1.04)}
+  .numbers::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(15,27,61,.72)}
+  .tiles{display:grid;gap:14px}
+  @media (min-width:620px){.tiles{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1000px){.tiles{grid-template-columns:repeat(4,1fr)}}
+  .tile{background:rgba(10,20,48,.55);border-top:2px solid var(--champ);padding:24px;display:grid;gap:8px;align-content:start;backdrop-filter:blur(6px)}
+  .tile b{font-family:var(--display);font-weight:400;font-size:2.1rem;color:var(--champ);line-height:1;font-variant-numeric:lining-nums tabular-nums}
+  .tile p{font-size:.95rem;color:rgba(255,255,255,.82)}
+  .fine{font-size:.74rem;color:rgba(255,255,255,.5);max-width:72ch;margin-top:22px}
 
   /* About */
   .about{display:grid;gap:36px;align-items:center}
-  @media (min-width:860px){ .about{grid-template-columns:5fr 6fr} }
-  .portrait{position:relative;aspect-ratio:4/5;max-width:100%;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);display:grid;place-items:center;color:rgba(255,255,255,.6);overflow:hidden}
-  .portrait .mono{width:96px;height:96px;background:transparent;border-color:rgba(255,255,255,.25)}
-  .portrait .mono svg{width:66px;height:66px}
-  .portrait small{position:absolute;left:18px;bottom:16px;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45)}
-  .about blockquote{margin:0;font-family:var(--display);font-size:clamp(1.35rem,2.2vw,1.75rem);font-style:italic;line-height:1.35;color:var(--navy)}
-  .langs{display:flex;flex-wrap:wrap;gap:10px}
-  .langs span{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--champ-2);color:var(--champ-2);border-radius:999px;padding:6px 12px}
+  @media (min-width:900px){.about{grid-template-columns:5fr 6fr}}
+  .portrait{position:relative;aspect-ratio:4/5;max-width:100%;background:url(img/bg-fabric.jpg) center/cover no-repeat;overflow:hidden}
+  .portrait::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(0deg,rgba(15,27,61,.85),transparent)}
+  .portrait .cap{position:absolute;left:22px;bottom:20px;z-index:1;color:var(--white);display:grid;gap:4px}
+  .portrait .cap b{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1}
+  .portrait .cap span{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--champ)}
+  .about .text{display:grid;gap:22px}
+  .about .text p{max-width:60ch}
+  .creds{display:grid;gap:10px;grid-template-columns:repeat(2,1fr);margin-top:8px}
+  .creds div{border-top:1px solid var(--champ);padding-top:10px;display:grid;gap:2px}
+  .creds b{font-family:var(--display);font-weight:500;font-size:1.1rem;color:var(--navy)}
+  .creds span{font-size:.84rem;color:var(--ink-2)}
 
   /* Process */
   .steps{display:grid;gap:28px;counter-reset:step}
-  @media (min-width:860px){ .steps{grid-template-columns:repeat(4,1fr)} }
-  .step{display:grid;gap:12px;border-top:1px solid var(--champ);padding-top:18px}
-  .step::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:var(--display);font-size:2.2rem;color:var(--champ-2);line-height:1}
+  @media (min-width:900px){.steps{grid-template-columns:repeat(4,1fr)}}
+  .step{display:grid;gap:12px;border-top:1px solid var(--champ);padding-top:18px;align-content:start}
+  .step::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:var(--display);font-size:2.2rem;color:var(--champ-text);line-height:1;font-variant-numeric:lining-nums}
   .step h3{font-size:1.35rem}
-  .step p{font-size:.98rem;color:var(--ink-2)}
+  .step p{font-size:.96rem;color:var(--ink-2)}
 
   /* Instagram */
-  .reels{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
-  .reel{aspect-ratio:9/16;max-width:100%;background:var(--navy);position:relative;overflow:hidden;display:grid;align-items:end;color:var(--white);text-decoration:none}
-  .reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75;transition:opacity .3s}
-  .reel:hover img{opacity:.9}
-  .reel span{position:relative;padding:14px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;background:linear-gradient(0deg,rgba(15,27,61,.85),transparent)}
-  @media (max-width:600px){ .reels{grid-template-columns:repeat(3,1fr);gap:8px} .reel span{font-size:.58rem;padding:10px} }
-
-  /* Facts tiles */
-  .tiles{display:grid;gap:14px}
-  @media (min-width:620px){ .tiles{grid-template-columns:repeat(2,1fr)} }
-  @media (min-width:960px){ .tiles{grid-template-columns:repeat(3,1fr)} }
-  .tile{background:var(--white);padding:26px;display:grid;gap:8px;border-top:2px solid var(--champ)}
-  .tile b{font-family:var(--display);font-weight:400;font-size:1.9rem;color:var(--navy);line-height:1.05;font-variant-numeric:tabular-nums}
-  .tile p{font-size:.95rem;color:var(--ink-2)}
-  .fineprint{font-size:.74rem;color:var(--ink-2);max-width:70ch;margin-top:22px}
+  .ig{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+  .ig a{aspect-ratio:4/5;max-width:100%;position:relative;overflow:hidden;display:block;background:var(--navy)}
+  .ig img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .3s,transform 1.2s}
+  .ig a:hover img{opacity:1;transform:scale(1.03)}
+  .ig span{position:absolute;left:12px;bottom:10px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white);text-shadow:0 1px 8px rgba(0,0,0,.5)}
+  @media (max-width:600px){.ig{gap:8px}}
 
   /* Contact */
   .contact{display:grid;gap:40px}
-  @media (min-width:860px){ .contact{grid-template-columns:1fr 1fr} }
+  @media (min-width:900px){.contact{grid-template-columns:1fr 1fr}}
   .form{display:grid;gap:14px}
   .field{display:grid;gap:6px}
-  .field label{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+  .field label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.7)}
   .field input,.field select,.field textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.22);color:var(--white);padding:13px 14px;font:inherit;font-size:1rem;border-radius:0}
   .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--champ);outline-offset:1px}
   .field select option{color:var(--ink)}
   .form-row{display:grid;gap:14px}
-  @media (min-width:560px){ .form-row{grid-template-columns:1fr 1fr} }
+  @media (min-width:560px){.form-row{grid-template-columns:1fr 1fr}}
   .toast{display:none;background:rgba(201,176,138,.15);border:1px solid var(--champ);padding:14px 16px;font-size:.95rem}
   .toast.show{display:block}
   .direct{display:grid;gap:18px;align-content:start}
   .direct .line{display:grid;gap:4px;border-top:1px solid rgba(255,255,255,.18);padding-top:12px}
-  .direct .line span{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.6)}
-  .direct .line b{font-family:var(--display);font-weight:400;font-size:1.5rem;letter-spacing:.02em}
+  .direct .line > span{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+  .direct .line b{font-family:var(--display);font-weight:400;font-size:1.45rem;letter-spacing:.02em}
+  .wa-big{display:grid;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:22px}
+  .wa-big p{color:rgba(255,255,255,.75);font-size:.95rem}
 
-  /* Footer */
-  footer{background:#0A1430;color:rgba(255,255,255,.6);font-size:.78rem}
+  footer{background:var(--navy-3);color:rgba(255,255,255,.6);font-size:.78rem}
   footer .wrap{display:grid;gap:18px;padding-block:34px}
-  @media (min-width:860px){ footer .wrap{grid-template-columns:1fr 1fr;align-items:center} }
+  @media (min-width:900px){footer .wrap{grid-template-columns:1fr 1fr;align-items:center}}
   footer .legal{display:flex;flex-wrap:wrap;gap:8px 22px}
   footer .legal span{white-space:nowrap}
   footer a{text-decoration:none;color:rgba(255,255,255,.75)}
   footer a:hover{color:var(--champ)}
 
-  /* Floating WhatsApp */
   .fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:35;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25);text-decoration:none}
   .fab svg{width:28px;height:28px;fill:#fff}
   .fab:focus-visible{outline:3px solid var(--champ);outline-offset:3px}
@@ -205,6 +259,8 @@
 
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4 5.3 5.3 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></symbol></svg>
+
 <div id="page" data-lang="de">
 
 <header class="nav">
@@ -214,15 +270,15 @@
       <span><span class="brand-name">Dream Deals Properties</span><br><span class="brand-tag">Live your Dream</span></span>
     </a>
     <nav class="nav-links" aria-label="Sektionen">
-      <a href="#paths"><span data-de>Für Sie</span><span data-en>For you</span></a>
-      <a href="#project"><span data-de>Projekt</span><span data-en>Project</span></a>
-      <a href="#about"><span data-de>Über mich</span><span data-en>About</span></a>
+      <a href="#projects"><span data-de>Projekte</span><span data-en>Projects</span></a>
+      <a href="#residences"><span data-de>Residenzen</span><span data-en>Residences</span></a>
+      <a href="#why"><span data-de>Warum Dubai</span><span data-en>Why Dubai</span></a>
+      <a href="#about"><span data-de>Über</span><span data-en>About</span></a>
       <a href="#process"><span data-de>Ablauf</span><span data-en>Process</span></a>
-      <a href="#facts"><span data-de>Dubai-Fakten</span><span data-en>Dubai facts</span></a>
       <a href="#contact"><span data-de>Kontakt</span><span data-en>Contact</span></a>
     </nav>
     <div class="nav-right">
-      <span class="draft">Entwurf v0.1</span>
+      <a class="btn btn-solid" data-wa="general" href="#contact"><svg><use href="#wa"/></svg>WhatsApp</a>
       <div class="lang" role="group" aria-label="Sprache">
         <button type="button" id="lang-de" aria-pressed="true">DE</button>
         <button type="button" id="lang-en" aria-pressed="false">EN</button>
@@ -232,73 +288,74 @@
 </header>
 
 <section class="hero" id="top">
-  <video autoplay muted loop playsinline poster="img/hero-poster.jpg" aria-hidden="true">
+  <div class="fallback" aria-hidden="true"></div>
+  <video autoplay muted loop playsinline preload="auto" poster="img/hero-poster.jpg" aria-hidden="true">
     <source src="vid/hero.mp4" type="video/mp4">
   </video>
   <div class="wrap">
-    <p class="eyebrow reveal" style="color:var(--champ)"><span data-de>Immobilien in Dubai · Off-Plan &amp; Bestand</span><span data-en>Dubai real estate · Off-plan &amp; ready</span></p>
+    <p class="eyebrow reveal" style="color:var(--champ)"><span data-de>Dubai · Off-Plan &amp; Prime Residences</span><span data-en>Dubai · Off-plan &amp; prime residences</span></p>
     <h1 class="reveal d1">
-      <span data-de>Dubai,<br>persönlich <span class="script">kuratiert.</span></span>
-      <span data-en>Dubai,<br>personally <span class="script">curated.</span></span>
+      <span data-de>Dubais beste Adressen.<br><em>Bevor sie auf den Markt kommen.</em></span>
+      <span data-en>Dubai's finest addresses.<br><em>Before they reach the market.</em></span>
     </h1>
     <p class="sub reveal d2">
-      <span data-de>Ausgewählte Residenzen von 139.000 bis 4 Millionen Euro. Beratung auf Deutsch, Englisch und Albanisch, von der ersten Investition bis zum Penthouse.</span>
-      <span data-en>Selected residences from EUR 139,000 to EUR 4 million. Advice in German, English and Albanian, from your first investment to the penthouse.</span>
+      <span data-de>Direkter Zugang zu Launch-Kontingenten von Emaar, Ellington, Binghatti und Fakhruddin. Selbst investiert, international beratend, von der Reservierung bis zur Übergabe.</span>
+      <span data-en>Direct access to launch allocations from Emaar, Ellington, Binghatti and Fakhruddin. Invested ourselves, advising internationally, from reservation to handover.</span>
     </p>
     <div class="hero-ctas reveal d3">
-      <a class="btn btn-solid" href="#project"><span data-de>Projekte entdecken</span><span data-en>Explore projects</span></a>
-      <a class="btn btn-wa" href="https://wa.me/971500000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4 5.3 5.3 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span data-de>WhatsApp</span><span data-en>WhatsApp</span></a>
+      <a class="btn btn-solid" data-wa="general" href="#contact"><svg><use href="#wa"/></svg><span data-de>Beratung per WhatsApp</span><span data-en>Talk on WhatsApp</span></a>
+      <a class="btn" href="#projects"><span data-de>Projekte ansehen</span><span data-en>View projects</span></a>
     </div>
   </div>
-  <span class="scroll" aria-hidden="true">Scroll</span>
 </section>
 
-<section class="trust" aria-label="Vertrauen">
+<section class="trust" aria-label="Warum Dream Deals">
   <div class="wrap">
-    <div class="stats">
-      <div class="stat"><b>139k</b><span data-de>Einstieg in EUR</span><span data-en>Entry in EUR</span></div>
-      <div class="stat"><b>3</b><span data-de>Beratungssprachen</span><span data-en>Advisory languages</span></div>
-      <div class="stat"><b>RERA</b><span data-de>Lizenziert in Dubai</span><span data-en>Licensed in Dubai</span></div>
+    <div class="claims">
+      <div class="claim"><b><span data-de>Direkter Entwicklerzugang</span><span data-en>Direct developer access</span></b><span><span data-de>Launch-Kontingente und Preislisten, bevor sie auf Portalen erscheinen.</span><span data-en>Launch allocations and price lists before they appear on portals.</span></span></div>
+      <div class="claim"><b><span data-de>Selbst investiert</span><span data-en>Invested ourselves</span></b><span><span data-de>Wir empfehlen, was wir selbst gekauft haben. Kein Portfolio vom Papier.</span><span data-en>We recommend what we have bought ourselves. No paper portfolio.</span></span></div>
+      <div class="claim"><b><span data-de>Prozess-Souveränität</span><span data-en>Process mastery</span></b><span><span data-de>Reservierung, Escrow, DLD-Eintragung, Übergabe. Auch per Vollmacht aus dem Ausland.</span><span data-en>Reservation, escrow, DLD registration, handover. By power of attorney from abroad, too.</span></span></div>
+      <div class="claim"><b><span data-de>Internationale Beratung</span><span data-en>International advisory</span></b><span><span data-de>Kunden in Europa und im Golf, Beratung in drei Sprachen, Betreuung vor Ort in Dubai.</span><span data-en>Clients in Europe and the Gulf, advice in three languages, on the ground in Dubai.</span></span></div>
     </div>
     <div class="partners">
-      <p class="eyebrow"><span data-de>Projekte von</span><span data-en>Projects by</span></p>
-      <div class="logos"><span>Emaar</span><span>Ellington</span><span>Binghatti</span><span>Fakhruddin</span></div>
+      <span class="eyebrow"><span data-de>Projekte von</span><span data-en>Projects by</span></span>
+      <span class="wm">Emaar</span><span class="wm">Ellington</span><span class="wm">Binghatti</span><span class="wm">Fakhruddin</span>
     </div>
   </div>
 </section>
 
 <section class="band" id="paths">
-  <div class="wrap stack" style="gap:40px">
-    <div class="stack">
+  <div class="wrap">
+    <div class="head">
       <p class="eyebrow"><span data-de>Drei Wege nach Dubai</span><span data-en>Three ways into Dubai</span></p>
       <h2><span data-de>Was suchen Sie?</span><span data-en>What are you looking for?</span></h2>
       <p class="lede"><span data-de>Jedes Budget hat eigene Fragen. Wählen Sie Ihren Weg, dann sprechen wir über das, was für Sie zählt.</span><span data-en>Every budget comes with its own questions. Choose your path and we talk about what matters to you.</span></p>
     </div>
     <div class="paths">
-      <a class="path" href="#contact" data-path="invest">
-        <figure><img src="img/studio.jpg" alt="Smart Studio, Tréppan Vision"></figure>
+      <a class="path" data-wa="invest" href="#contact">
+        <figure><img src="img/seg-invest.jpg" alt="Schlafbereich einer Residenz in Navy und Sand"></figure>
         <div class="body">
           <p class="eyebrow"><span data-de>Erste Investition</span><span data-en>First investment</span></p>
-          <p class="range">139.000 – 400.000 €</p>
-          <p><span data-de>Studio oder 1 Schlafzimmer, off-plan mit Zahlungsplan. Vermietung und Verwaltung aus der Ferne, Rendite statt Aufwand.</span><span data-en>Studio or one bedroom, off-plan with a payment plan. Rented and managed remotely, return without effort.</span></p>
-          <span class="cta"><span data-de>Investment-Guide anfordern</span><span data-en>Request the investment guide</span></span>
+          <p class="range num"><span data-de>139.000 bis 400.000 €</span><span data-en>EUR 139,000 to 400,000</span></p>
+          <p><span data-de>Studio oder 1 Schlafzimmer, off-plan mit Zahlungsplan. Vermietung und Verwaltung aus der Ferne, Rendite statt Aufwand.</span><span data-en>Studio or one bedroom, off-plan with a payment plan. Let and managed remotely, yield without the workload.</span></p>
+          <span class="cta"><span data-de>Investment-Guide per WhatsApp</span><span data-en>Investment guide via WhatsApp</span></span>
         </div>
       </a>
-      <a class="path" href="#contact" data-path="home">
-        <figure><img src="img/bedroom.jpg" alt="Schlafzimmer mit Blick auf Downtown Dubai"></figure>
+      <a class="path" data-wa="home" href="#contact">
+        <figure><img src="img/seg-home.jpg" alt="Wohnzimmer mit bodentiefen Fenstern und Familie"></figure>
         <div class="body">
           <p class="eyebrow"><span data-de>Zuhause in Dubai</span><span data-en>A home in Dubai</span></p>
-          <p class="range">400.000 – 1,2 Mio. €</p>
-          <p><span data-de>2 bis 3 Schlafzimmer in Communities mit Schulen, Grün und kurzen Wegen. Für Familien, die ankommen wollen.</span><span data-en>Two to three bedrooms in communities with schools, greenery and short distances. For families who want to arrive.</span></p>
-          <span class="cta"><span data-de>Besichtigung oder Video-Call</span><span data-en>Viewing or video call</span></span>
+          <p class="range num"><span data-de>400.000 bis 1,2 Mio. €</span><span data-en>EUR 400,000 to 1.2 million</span></p>
+          <p><span data-de>2 bis 3 Schlafzimmer in Communities mit Schulen, Grün und kurzen Wegen. Für Familien, die bleiben.</span><span data-en>Two to three bedrooms in communities with schools, greenery and short distances. For families who are staying.</span></p>
+          <span class="cta"><span data-de>Besichtigung anfragen</span><span data-en>Request a viewing</span></span>
         </div>
       </a>
-      <a class="path" href="#contact" data-path="private">
-        <figure><img src="img/pool-day.jpg" alt="Rooftop Infinity Pool mit Skyline"></figure>
+      <a class="path" data-wa="private" href="#contact">
+        <figure><img src="img/seg-private.jpg" alt="Residenz am Wasser bei Sonnenuntergang, Dubai Islands"></figure>
         <div class="body">
           <p class="eyebrow"><span data-de>Privates Portfolio</span><span data-en>Private portfolio</span></p>
-          <p class="range">1,2 – 4 Mio. €</p>
-          <p><span data-de>Penthouses, Villen und Off-Market-Zugang. Diskret, persönlich, direkt mit den Entwicklern.</span><span data-en>Penthouses, villas and off-market access. Discreet, personal, directly with the developers.</span></p>
+          <p class="range num"><span data-de>1,2 bis 4 Mio. €</span><span data-en>EUR 1.2 to 4 million</span></p>
+          <p><span data-de>Penthouses, Waterfront und Off-Market-Zugang. Diskret, persönlich, direkt mit den Entwicklern.</span><span data-en>Penthouses, waterfront and off-market access. Discreet, personal, directly with the developers.</span></p>
           <span class="cta"><span data-de>Private Beratung</span><span data-en>Private consultation</span></span>
         </div>
       </a>
@@ -306,132 +363,227 @@
   </div>
 </section>
 
-<section class="band on-navy" id="project">
+<section class="band on-navy" id="projects">
   <div class="wrap">
-    <div class="feat-head">
+    <div class="head split">
       <div class="stack">
-        <p class="eyebrow"><span data-de>Ausgewähltes Projekt · Dubai Land Residence Complex</span><span data-en>Featured project · Dubai Land Residence Complex</span></p>
-        <h2>Tréppan <span class="script">Vision</span></h2>
-        <p class="lede"><span data-de>Fakhruddin Properties baut hier, wo Wellness, Technologie und ein Rooftop mit Infinity Pool zusammenkommen. 408 Apartments mit flexiblen Grundrissen: aus einem Schlafzimmer werden zwei, wenn das Leben es verlangt.</span><span data-en>Fakhruddin Properties builds where wellness, technology and a rooftop infinity pool meet. 408 apartments with flexible layouts: one bedroom becomes two when life asks for it.</span></p>
+        <p class="eyebrow"><span data-de>Projekte</span><span data-en>Projects</span></p>
+        <h2><span data-de>Aktuelle <em>Auswahl.</em></span><span data-en>Current <em>selection.</em></span></h2>
+        <p class="lede"><span data-de>Was wir gerade anbieten: kuratiert, mit Launch-Preisen und Zahlungsplänen direkt vom Entwickler.</span><span data-en>What we are offering now: curated, with launch prices and payment plans directly from the developer.</span></p>
       </div>
-      <a class="btn" href="#contact"><span data-de>Broschüre anfordern</span><span data-en>Request the brochure</span></a>
+      <div class="filters" role="group" aria-label="Filter">
+        <button type="button" data-f="all" aria-pressed="true"><span data-de>Alle</span><span data-en>All</span></button>
+        <button type="button" data-f="islands" aria-pressed="false">Dubai Islands</button>
+        <button type="button" data-f="dlrc" aria-pressed="false">Dubailand</button>
+        <button type="button" data-f="jv" aria-pressed="false">JVC · JVT</button>
+      </div>
     </div>
-    <div class="gallery" aria-label="Galerie Tréppan Vision">
-      <figure><img src="img/pool-sunset.jpg" alt="Rooftop Infinity Pool bei Sonnenuntergang"><figcaption><span data-de>Rooftop · Infinity Pool</span><span data-en>Rooftop · Infinity pool</span></figcaption></figure>
-      <figure><img src="img/tower.jpg" alt="Fassade Tréppan Vision"><figcaption><span data-de>Fassade · DLRC</span><span data-en>Façade · DLRC</span></figcaption></figure>
-      <figure><img src="img/lobby.jpg" alt="Lobby"><figcaption><span data-de>Lobby</span><span data-en>Lobby</span></figcaption></figure>
-      <figure><img src="img/cafe.jpg" alt="Greenhouse Café"><figcaption>Greenhouse Café</figcaption></figure>
-      <figure><img src="img/studio.jpg" alt="Smart Studio"><figcaption>Smart Studio</figcaption></figure>
-      <figure><img src="img/office.jpg" alt="Office Lobby"><figcaption><span data-de>Office Lobby · 48 Suiten</span><span data-en>Office lobby · 48 suites</span></figcaption></figure>
+    <div class="projects" id="project-grid">
+      <a class="project" data-c="dlrc" data-wa="p-vision" href="#contact">
+        <figure><img src="img/prj-vision.jpg" alt="Tréppan Vision"><span class="dev">Fakhruddin</span></figure>
+        <div class="body"><h3>Tréppan Vision</h3><p class="loc">Dubai Land Residence Complex</p>
+          <div class="meta"><div><b class="num">AED 650k</b><span data-de>Preis ab</span><span data-en>From</span></div><div><b class="num">Q4 2027</b><span data-de>Übergabe</span><span data-en>Handover</span></div><div><b>Studio – 3BR</b><span data-de>Einheiten</span><span data-en>Units</span></div><div><b class="num">60 / 40</b><span data-de>Zahlungsplan</span><span data-en>Payment plan</span></div></div>
+          <span class="cta"><span data-de>Preisliste anfragen</span><span data-en>Request price list</span></span></div>
+      </a>
+      <a class="project" data-c="islands" data-wa="p-prive" href="#contact">
+        <figure><img src="img/prj-prive.jpg" alt="Tréppan Privé"><span class="dev">Fakhruddin</span></figure>
+        <div class="body"><h3>Tréppan Privé</h3><p class="loc">Dubai Islands · Waterfront</p>
+          <div class="meta"><div><b class="num">AED 2,4 Mio.</b><span data-de>Preis ab</span><span data-en>From</span></div><div><b class="num">2027</b><span data-de>Übergabe</span><span data-en>Handover</span></div><div><b>1 – 4BR</b><span data-de>Einheiten</span><span data-en>Units</span></div><div><b class="num">50 / 50</b><span data-de>Zahlungsplan</span><span data-en>Payment plan</span></div></div>
+          <span class="cta"><span data-de>Preisliste anfragen</span><span data-en>Request price list</span></span></div>
+      </a>
+      <a class="project" data-c="islands" data-wa="p-serenique" href="#contact">
+        <figure><img src="img/prj-serenique.jpg" alt="Tréppan Serenique"><span class="dev">Fakhruddin</span></figure>
+        <div class="body"><h3>Tréppan Serenique</h3><p class="loc">Dubai Islands</p>
+          <div class="meta"><div><b class="num">AED 1,6 Mio.</b><span data-de>Preis ab</span><span data-en>From</span></div><div><b class="num">2027</b><span data-de>Übergabe</span><span data-en>Handover</span></div><div><b>1 – 3BR</b><span data-de>Einheiten</span><span data-en>Units</span></div><div><b class="num">60 / 40</b><span data-de>Zahlungsplan</span><span data-en>Payment plan</span></div></div>
+          <span class="cta"><span data-de>Preisliste anfragen</span><span data-en>Request price list</span></span></div>
+      </a>
+      <a class="project" data-c="islands" data-wa="p-hatimi" href="#contact">
+        <figure><img src="img/prj-hatimi.jpg" alt="Hatimi Residences"><span class="dev">Fakhruddin</span></figure>
+        <div class="body"><h3>Hatimi Residences</h3><p class="loc">Dubai Islands · Sea view</p>
+          <div class="meta"><div><b class="num">AED 1,9 Mio.</b><span data-de>Preis ab</span><span data-en>From</span></div><div><b class="num">2026</b><span data-de>Übergabe</span><span data-en>Handover</span></div><div><b>1 – 3BR</b><span data-de>Einheiten</span><span data-en>Units</span></div><div><b class="num">40 / 60</b><span data-de>Zahlungsplan</span><span data-en>Payment plan</span></div></div>
+          <span class="cta"><span data-de>Preisliste anfragen</span><span data-en>Request price list</span></span></div>
+      </a>
+      <a class="project" data-c="jv" data-wa="p-tower" href="#contact">
+        <figure><img src="img/prj-tower.jpg" alt="Tréppan Tower"><span class="dev">Fakhruddin</span></figure>
+        <div class="body"><h3>Tréppan Tower</h3><p class="loc">Jumeirah Village Triangle</p>
+          <div class="meta"><div><b class="num">AED 720k</b><span data-de>Preis ab</span><span data-en>From</span></div><div><b class="num">2026</b><span data-de>Übergabe</span><span data-en>Handover</span></div><div><b>Studio – 3BR</b><span data-de>Einheiten</span><span data-en>Units</span></div><div><b class="num">70 / 30</b><span data-de>Zahlungsplan</span><span data-en>Payment plan</span></div></div>
+          <span class="cta"><span data-de>Preisliste anfragen</span><span data-en>Request price list</span></span></div>
+      </a>
+      <a class="project" data-c="jv" data-wa="p-maimoon" href="#contact">
+        <figure><img src="img/prj-maimoon.jpg" alt="Maimoon Gardens"><span class="dev">Fakhruddin</span></figure>
+        <div class="body"><h3>Maimoon Gardens</h3><p class="loc">Jumeirah Village Circle</p>
+          <div class="meta"><div><b class="num">AED 580k</b><span data-de>Preis ab</span><span data-en>From</span></div><div><b class="num">2026</b><span data-de>Übergabe</span><span data-en>Handover</span></div><div><b>Studio – 2BR</b><span data-de>Einheiten</span><span data-en>Units</span></div><div><b class="num">60 / 40</b><span data-de>Zahlungsplan</span><span data-en>Payment plan</span></div></div>
+          <span class="cta"><span data-de>Preisliste anfragen</span><span data-en>Request price list</span></span></div>
+      </a>
     </div>
-    <div class="facts">
-      <div class="fact"><b>408</b><span data-de>Apartments, Studio bis 3 Schlafzimmer</span><span data-en>Apartments, studio to three bedrooms</span></div>
-      <div class="fact"><b>48 + 7</b><span data-de>Office-Suiten und Retail-Einheiten</span><span data-en>Office suites and retail units</span></div>
-      <div class="fact"><b>8</b><span data-de>Service-Roboter, von Concierge bis Lieferung</span><span data-en>Service robots, from concierge to delivery</span></div>
-      <div class="fact"><b>1963</b><span data-de>Familientradition des Entwicklers</span><span data-en>The developer's family heritage</span></div>
+    <p class="note"><span data-de>Entwurf: Preise, Übergabetermine und Zahlungspläne sind Beispielwerte und werden vor Launch durch die aktuellen Entwicklerangaben ersetzt. Renderings: Fakhruddin Properties.</span><span data-en>Draft: prices, handover dates and payment plans are example values and will be replaced by current developer figures before launch. Renderings: Fakhruddin Properties.</span></p>
+  </div>
+</section>
+
+<section class="band" id="featured">
+  <div class="wrap">
+    <div class="head split">
+      <div class="stack">
+        <p class="eyebrow"><span data-de>Im Fokus · Dubai Land Residence Complex</span><span data-en>In focus · Dubai Land Residence Complex</span></p>
+        <h2>Tréppan <em>Vision</em></h2>
+        <p class="lede"><span data-de>408 Residenzen mit flexiblen Grundrissen, Rooftop mit Infinity Pool, Greenhouse Café und einem Gebäude, das mitdenkt. Fakhruddin Properties, Familientradition seit 1963.</span><span data-en>408 residences with flexible layouts, a rooftop infinity pool, a greenhouse café and a building that thinks ahead. Fakhruddin Properties, family heritage since 1963.</span></p>
+      </div>
+      <a class="btn btn-navy" data-wa="p-vision" href="#contact"><span data-de>Broschüre anfordern</span><span data-en>Request the brochure</span></a>
     </div>
-    <div class="feat-note">
-      <small><span data-de>Renderings: Fakhruddin Properties. Preise, Zahlungsplan und Fertigstellung auf Anfrage. Nur der Kaufvertrag ist rechtlich bindend.</span><span data-en>Renderings: Fakhruddin Properties. Prices, payment plan and completion on request. Only the sales and purchase agreement is legally binding.</span></small>
+  </div>
+  <div class="on-navy" style="padding-block:40px 56px">
+    <div class="wrap gal-wrap">
+      <div class="gallery" id="gallery" aria-label="Galerie Tréppan Vision">
+        <figure><img src="img/gal-exterior.jpg" alt="Tréppan Vision im Abendlicht"><figcaption><span data-de>Außenansicht · Abend</span><span data-en>Exterior · Evening</span></figcaption></figure>
+        <figure><img src="img/gal-lobby.jpg" alt="Lobby mit Travertin"><figcaption>Lobby</figcaption></figure>
+        <figure><img src="img/gal-lift.jpg" alt="Lift-Lobby mit Bronze und Marmor"><figcaption><span data-de>Lift-Lobby · Bronze und Marmor</span><span data-en>Lift lobby · Bronze and marble</span></figcaption></figure>
+        <figure><img src="img/gal-pool.jpg" alt="Infinity Pool mit Skyline"><figcaption><span data-de>Rooftop · Infinity Pool</span><span data-en>Rooftop · Infinity pool</span></figcaption></figure>
+        <figure><img src="img/gal-amphi.jpg" alt="Outdoor-Amphitheater in der Dämmerung"><figcaption><span data-de>Outdoor-Kino · Dämmerung</span><span data-en>Outdoor cinema · Dusk</span></figcaption></figure>
+        <figure><img src="img/gal-residence.jpg" alt="Social Pavilion mit Deck"><figcaption>Social Pavilion</figcaption></figure>
+      </div>
+      <div class="arrows"><button type="button" id="gal-prev" aria-label="Zurück">‹</button><button type="button" id="gal-next" aria-label="Weiter">›</button></div>
+      <div class="facts">
+        <div class="fact"><b>408</b><span data-de>Residenzen, Studio bis 3 Schlafzimmer</span><span data-en>Residences, studio to three bedrooms</span></div>
+        <div class="fact"><b>48 + 7</b><span data-de>Office-Suiten und Retail-Einheiten</span><span data-en>Office suites and retail units</span></div>
+        <div class="fact"><b>1 → 2</b><span data-de>Flexible Grundrisse: ein Schlafzimmer wird zwei</span><span data-en>Flexible layouts: one bedroom becomes two</span></div>
+        <div class="fact"><b>1963</b><span data-de>Familientradition des Entwicklers</span><span data-en>The developer's family heritage</span></div>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="band" id="residences">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span data-de>Residenzen</span><span data-en>Residences</span></p>
+      <h2><span data-de>Innen hält es, <em>was außen verspricht.</em></span><span data-en>Inside keeps <em>what the outside promises.</em></span></h2>
+      <p class="lede"><span data-de>Travertin, Navy-Mosaik, Messing und bodentiefe Fenster auf die Skyline. Die Details, die bei der Übergabe den Unterschied machen.</span><span data-en>Travertine, navy mosaic, brass and floor-to-ceiling windows onto the skyline. The details that make the difference at handover.</span></p>
+    </div>
+    <div class="res-grid">
+      <div class="res"><figure><img src="img/res-kitchen.jpg" alt="Küche mit Einbaugeräten und Glaspendeln"></figure><b><span data-de>Bosch-Küche</span><span data-en>Bosch kitchen</span></b><span><span data-de>Einbaugeräte, grifflose Fronten, Glaspendel über dem Esstisch.</span><span data-en>Integrated appliances, handleless fronts, glass pendants over the dining table.</span></span></div>
+      <div class="res"><figure><img src="img/res-living.jpg" alt="Wohnraum mit Skyline-Blick"></figure><b><span data-de>Wohnen mit Skyline</span><span data-en>Living with the skyline</span></b><span><span data-de>Bodentiefe Verglasung, Burj Khalifa im Fenster, Kupferleuchten.</span><span data-en>Floor-to-ceiling glazing, Burj Khalifa in the window, copper lighting.</span></span></div>
+      <div class="res"><figure><img src="img/res-bedroom.jpg" alt="Schlafzimmer in Navy und Sand"></figure><b><span data-de>Schlafen in Navy und Sand</span><span data-en>Sleeping in navy and sand</span></b><span><span data-de>Gepolstertes Kopfteil, Morgenlicht, Blick auf Downtown.</span><span data-en>Upholstered headboard, morning light, a view of Downtown.</span></span></div>
+      <div class="res"><figure><img src="img/res-bath.jpg" alt="Bad mit Travertin und Navy-Mosaik"></figure><b><span data-de>Travertin und Navy-Mosaik</span><span data-en>Travertine and navy mosaic</span></b><span><span data-de>Organischer Spiegel, Edelstahlbecken, beleuchtete Nische.</span><span data-en>Organic mirror, stainless basin, lit niche.</span></span></div>
+      <div class="res"><figure><img src="img/res-wardrobe.jpg" alt="Eingebaute Ankleide mit Marmorintarsie"></figure><b><span data-de>Eingebaute Ankleide</span><span data-en>Built-in dressing</span></b><span><span data-de>Wandbreite Schränke in Holzmaserung, Schminkplatz mit Marmor.</span><span data-en>Wall-wide wardrobes in wood grain, vanity with marble inlay.</span></span></div>
+      <div class="res"><figure><img src="img/res-view.jpg" alt="Infinity Pool mit Skyline"></figure><b><span data-de>Rooftop auf Ebene 15</span><span data-en>Rooftop on level 15</span></b><span><span data-de>Infinity Pool, Lounge und Blick über Dubai, exklusiv für Bewohner.</span><span data-en>Infinity pool, lounge and a view across Dubai, residents only.</span></span></div>
+    </div>
+    <div class="spec">
+      <div><b><span data-de>Flexible Grundrisse</span><span data-en>Flexible layouts</span></b><span><span data-de>1BR wird 2BR, 2BR wird 3BR</span><span data-en>1BR becomes 2BR, 2BR becomes 3BR</span></span></div>
+      <div><b>Smart Home</b><span><span data-de>Licht, Klima, Zutritt per App und Biometrie</span><span data-en>Light, climate, access by app and biometrics</span></span></div>
+      <div><b><span data-de>Luft und Wasser</span><span data-en>Air and water</span></b><span><span data-de>Filterung in jeder Einheit, Trinkwasser aus der Leitung</span><span data-en>Filtration in every unit, drinking water from the tap</span></span></div>
+      <div><b>Service</b><span><span data-de>Concierge, Lieferung und Reinigung im Gebäude</span><span data-en>Concierge, delivery and cleaning in the building</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band numbers" id="why">
+  <div class="wrap">
+    <div class="head on-navy" style="background:transparent">
+      <p class="eyebrow"><span data-de>Warum Dubai</span><span data-en>Why Dubai</span></p>
+      <h2><span data-de>Die Zahlen, <em>die Käufer zuerst fragen.</em></span><span data-en>The numbers <em>buyers ask about first.</em></span></h2>
+    </div>
+    <div class="tiles">
+      <div class="tile"><b class="num">0 %</b><p><span data-de>Steuer auf Mieteinnahmen in den VAE, keine jährliche Grundsteuer. Die Steuerpflicht im Heimatland prüfen wir mit Ihrem Berater.</span><span data-en>Tax on rental income in the UAE, no annual property tax. Your home-country position is checked with your adviser.</span></p></div>
+      <div class="tile"><b class="num">4 %</b><p><span data-de>Registrierungsgebühr der Dubai Land Department beim Kauf, einmalig.</span><span data-en>Dubai Land Department registration fee on purchase, one-off.</span></p></div>
+      <div class="tile"><b class="num"><span data-de>AED 2 Mio.</span><span data-en>AED 2M</span></b><p><span data-de>Immobilienwert, ab dem das 10-jährige Golden Visa beantragt werden kann.</span><span data-en>Property value from which the ten-year Golden Visa can be applied for.</span></p></div>
+      <div class="tile"><b class="num">100 %</b><p><span data-de>Eigentum für Ausländer in Freehold-Gebieten, auf Ihren Namen eingetragen. Zahlungen off-plan über behördlich überwachte Treuhandkonten.</span><span data-en>Foreign ownership in freehold areas, registered in your name. Off-plan payments through regulator-supervised escrow accounts.</span></p></div>
+    </div>
+    <p class="fine"><span data-de>Angaben indikativ, Stand 2026, keine Steuer- oder Rechtsberatung.</span><span data-en>Indicative figures as of 2026, not tax or legal advice.</span></p>
   </div>
 </section>
 
 <section class="band" id="about">
   <div class="wrap about">
     <div class="portrait">
-      <span class="mono" aria-hidden="true"><svg viewBox="0 0 40 40"><text x="9" y="28" font-family="Cormorant Garamond, Georgia, serif" font-size="24" font-weight="300" fill="#fff" letter-spacing="-4">DD</text></svg></span>
-      <small><span data-de>Porträt folgt</span><span data-en>Portrait to follow</span></small>
+      <div class="cap"><b>Loretta Sani</b><span><span data-de>Gründerin · Dream Deals Properties</span><span data-en>Founder · Dream Deals Properties</span></span></div>
     </div>
-    <div class="stack" style="gap:24px">
-      <p class="eyebrow"><span data-de>Über mich</span><span data-en>About me</span></p>
-      <h2><span data-de>Ich kaufe nicht für Sie. Ich wähle mit Ihnen.</span><span data-en>I don't buy for you. I choose with you.</span></h2>
-      <blockquote><span data-de>„Als Investorin im Dubaier Immobilienmarkt stehe ich deutschsprachigen und albanischen Unternehmern als vertrauensvolle Beraterin zur Seite.“</span><span data-en>“As an investor in Dubai's property market, I advise German-speaking and Albanian entrepreneurs as a trusted partner.”</span></blockquote>
-      <p class="lede"><span data-de>Businesstouren vor Ort, persönliche Begleitung von der Shortlist bis zur Schlüsselübergabe, Vermietung und Verkauf danach. Ich arbeite direkt mit den Entwicklern, nicht über Zwischenhändler.</span><span data-en>Business tours on site, personal guidance from shortlist to handover, letting and resale afterwards. I work directly with the developers, not through intermediaries.</span></p>
-      <div class="langs"><span>Deutsch</span><span>English</span><span>Shqip</span></div>
+    <div class="text">
+      <p class="eyebrow"><span data-de>Über uns</span><span data-en>About us</span></p>
+      <h2><span data-de>Wir kaufen, <em>was wir empfehlen.</em></span><span data-en>We buy <em>what we recommend.</em></span></h2>
+      <p class="lede"><span data-de>Dream Deals Properties ist eine unabhängige Beratung für Dubai-Immobilien mit Sitz in Dubai. Wir arbeiten direkt mit den Entwicklern, kennen die Preislisten vor dem Launch und haben jeden Schritt des Kaufs, von der Reservierung über Escrow bis zur DLD-Eintragung, mit eigenem Geld durchlaufen.</span><span data-en>Dream Deals Properties is an independent advisory for Dubai real estate, based in Dubai. We work directly with the developers, know the price lists before launch and have been through every step of a purchase, from reservation through escrow to DLD registration, with our own money.</span></p>
+      <p><span data-de>Unsere Kunden sind Unternehmer und Investoren aus Europa und dem Golf. Was sie bekommen: eine Shortlist statt eines Portals, einen Ansprechpartner statt eines Call-Centers und eine Antwort am selben Tag.</span><span data-en>Our clients are entrepreneurs and investors from Europe and the Gulf. What they get: a shortlist instead of a portal, one point of contact instead of a call centre, and an answer the same day.</span></p>
+      <div class="creds">
+        <div><b><span data-de>Vor Ort in Dubai</span><span data-en>On the ground in Dubai</span></b><span><span data-de>Besichtigungen, Sales Center, Übergaben</span><span data-en>Viewings, sales centres, handovers</span></span></div>
+        <div><b><span data-de>RERA-lizenziert</span><span data-en>RERA licensed</span></b><span><span data-de>Registriert bei der Dubai Land Department</span><span data-en>Registered with the Dubai Land Department</span></span></div>
+        <div><b><span data-de>Entwicklerpartner</span><span data-en>Developer partner</span></b><span>Emaar, Ellington, Binghatti, Fakhruddin</span></div>
+        <div><b><span data-de>Selbst investiert</span><span data-en>Invested ourselves</span></b><span><span data-de>Off-Plan und Bestand in Dubai</span><span data-en>Off-plan and ready property in Dubai</span></span></div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="band on-sand2" id="process">
-  <div class="wrap stack" style="gap:40px">
-    <div class="stack">
+  <div class="wrap">
+    <div class="head">
       <p class="eyebrow"><span data-de>Ablauf</span><span data-en>Process</span></p>
-      <h2><span data-de>Vier Schritte, auch aus dem Ausland.</span><span data-en>Four steps, also from abroad.</span></h2>
+      <h2><span data-de>Vier Schritte, <em>auch aus dem Ausland.</em></span><span data-en>Four steps, <em>from abroad as well.</em></span></h2>
     </div>
     <div class="steps">
-      <div class="step"><h3><span data-de>Gespräch</span><span data-en>Conversation</span></h3><p><span data-de>30 Minuten per Video-Call: Budget, Ziel, Zeithorizont. Danach wissen Sie, ob Dubai zu Ihnen passt.</span><span data-en>Thirty minutes by video call: budget, goal, time horizon. Afterwards you know whether Dubai fits you.</span></p></div>
-      <div class="step"><h3><span data-de>Auswahl</span><span data-en>Selection</span></h3><p><span data-de>Eine kuratierte Shortlist von drei bis fünf Einheiten, mit Grundrissen und Zahlungsplan. Auf Wunsch Businesstour in Dubai.</span><span data-en>A curated shortlist of three to five units, with floor plans and payment plan. A business tour in Dubai on request.</span></p></div>
-      <div class="step"><h3><span data-de>Reservierung</span><span data-en>Reservation</span></h3><p><span data-de>Reservierung beim Entwickler, Zahlung auf das Treuhandkonto (Escrow). Per Vollmacht auch ohne Reise möglich.</span><span data-en>Reservation with the developer, payment into the escrow account. Possible by power of attorney without travelling.</span></p></div>
+      <div class="step"><h3><span data-de>Gespräch</span><span data-en>Conversation</span></h3><p><span data-de>30 Minuten per Video-Call: Budget, Ziel, Zeithorizont. Danach wissen Sie, ob Dubai zu Ihnen passt.</span><span data-en>Thirty minutes by video call: budget, goal, time horizon. Afterwards you know whether Dubai is right for you.</span></p></div>
+      <div class="step"><h3><span data-de>Auswahl</span><span data-en>Selection</span></h3><p><span data-de>Eine Shortlist von drei bis fünf Einheiten mit Grundrissen und Zahlungsplan. Auf Wunsch Besichtigungstour in Dubai.</span><span data-en>A shortlist of three to five units with floor plans and payment plan. A viewing tour in Dubai on request.</span></p></div>
+      <div class="step"><h3><span data-de>Reservierung</span><span data-en>Reservation</span></h3><p><span data-de>Reservierung beim Entwickler, Zahlung auf das Treuhandkonto. Per Vollmacht auch ohne Reise.</span><span data-en>Reservation with the developer, payment into escrow. By power of attorney without travelling.</span></p></div>
       <div class="step"><h3><span data-de>Übergabe</span><span data-en>Handover</span></h3><p><span data-de>Eintragung bei der Dubai Land Department, Schlüsselübergabe, auf Wunsch Vermietung und Verwaltung.</span><span data-en>Registration with the Dubai Land Department, key handover, letting and management on request.</span></p></div>
     </div>
   </div>
 </section>
 
 <section class="band" id="instagram">
-  <div class="wrap stack" style="gap:34px">
-    <div class="stack">
-      <p class="eyebrow">@dream_deals_properties</p>
-      <h2><span data-de>Aus Dubai, jede Woche.</span><span data-en>From Dubai, every week.</span></h2>
-      <p class="lede"><span data-de>Baustellenbesuche, Sales Center, neue Launches. Folgen Sie mir auf Instagram, dort sehen Sie, was ich sehe.</span><span data-en>Site visits, sales centres, new launches. Follow me on Instagram and see what I see.</span></p>
+  <div class="wrap">
+    <div class="head split">
+      <div class="stack">
+        <p class="eyebrow">@dream_deals_properties</p>
+        <h2><span data-de>Aus Dubai, <em>jede Woche.</em></span><span data-en>From Dubai, <em>every week.</em></span></h2>
+        <p class="lede"><span data-de>Baustellen, Sales Center, Launches: auf Instagram sehen Sie, was wir sehen.</span><span data-en>Sites, sales centres, launches: on Instagram you see what we see.</span></p>
+      </div>
+      <a class="btn btn-navy" href="https://www.instagram.com/dream_deals_properties/" target="_blank" rel="noopener"><span data-de>Auf Instagram folgen</span><span data-en>Follow on Instagram</span></a>
     </div>
-    <div class="reels">
-      <a class="reel" href="https://www.instagram.com/dream_deals_properties/" target="_blank" rel="noopener"><img src="img/facade.jpg" alt=""><span><span data-de>Reel ansehen</span><span data-en>Watch reel</span></span></a>
-      <a class="reel" href="https://www.instagram.com/dream_deals_properties/" target="_blank" rel="noopener"><img src="img/lobby.jpg" alt=""><span><span data-de>Reel ansehen</span><span data-en>Watch reel</span></span></a>
-      <a class="reel" href="https://www.instagram.com/dream_deals_properties/" target="_blank" rel="noopener"><img src="img/cafe.jpg" alt=""><span><span data-de>Reel ansehen</span><span data-en>Watch reel</span></span></a>
+    <div class="ig">
+      <a href="https://www.instagram.com/dream_deals_properties/" target="_blank" rel="noopener"><img src="img/gal-exterior.jpg" alt=""><span>Instagram</span></a>
+      <a href="https://www.instagram.com/dream_deals_properties/" target="_blank" rel="noopener"><img src="img/res-bedroom.jpg" alt=""><span>Instagram</span></a>
+      <a href="https://www.instagram.com/dream_deals_properties/" target="_blank" rel="noopener"><img src="img/gal-pool.jpg" alt=""><span>Instagram</span></a>
     </div>
-    <div><a class="btn btn-navy" href="https://www.instagram.com/dream_deals_properties/" target="_blank" rel="noopener"><span data-de>Auf Instagram folgen</span><span data-en>Follow on Instagram</span></a></div>
-  </div>
-</section>
-
-<section class="band on-sand2" id="facts">
-  <div class="wrap stack" style="gap:34px">
-    <div class="stack">
-      <p class="eyebrow"><span data-de>Dubai in Zahlen</span><span data-en>Dubai in numbers</span></p>
-      <h2><span data-de>Was Käufer zuerst fragen.</span><span data-en>What buyers ask first.</span></h2>
-    </div>
-    <div class="tiles">
-      <div class="tile"><b>0 %</b><p><span data-de>Einkommensteuer auf Mieteinnahmen und keine jährliche Grundsteuer für Privatpersonen.</span><span data-en>Income tax on rental income, and no annual property tax for individuals.</span></p></div>
-      <div class="tile"><b>4 %</b><p><span data-de>Registrierungsgebühr der Dubai Land Department beim Kauf, einmalig.</span><span data-en>Dubai Land Department registration fee on purchase, one-off.</span></p></div>
-      <div class="tile"><b>AED 2 Mio.</b><p><span data-de>Immobilienwert, ab dem das 10-jährige Golden Visa beantragt werden kann.</span><span data-en>Property value from which the ten-year Golden Visa can be applied for.</span></p></div>
-      <div class="tile"><b>60 / 40</b><p><span data-de>Typischer Off-Plan-Zahlungsplan: 60 % während der Bauphase, 40 % bei Übergabe. Je nach Entwickler.</span><span data-en>Typical off-plan payment plan: 60% during construction, 40% at handover. Varies by developer.</span></p></div>
-      <div class="tile"><b>100 %</b><p><span data-de>Eigentum für Ausländer in Freehold-Gebieten, eingetragen auf Ihren Namen.</span><span data-en>Foreign ownership in freehold areas, registered in your name.</span></p></div>
-      <div class="tile"><b>Escrow</b><p><span data-de>Off-Plan-Zahlungen gehen auf ein behördlich überwachtes Treuhandkonto, nicht an den Entwickler direkt.</span><span data-en>Off-plan payments go into a regulator-supervised escrow account, not directly to the developer.</span></p></div>
-    </div>
-    <p class="fineprint"><span data-de>Angaben indikativ, Stand 2026, keine Steuer- oder Rechtsberatung. Prüfung im Einzelfall, auch Ihre Steuerpflicht im Heimatland.</span><span data-en>Indicative figures as of 2026, not tax or legal advice. Each case is checked individually, including your tax position at home.</span></p>
   </div>
 </section>
 
 <section class="band on-navy" id="contact">
   <div class="wrap contact">
-    <div class="stack" style="gap:24px">
+    <div class="stack" style="gap:22px">
       <p class="eyebrow"><span data-de>Kontakt</span><span data-en>Contact</span></p>
-      <h2><span data-de>Sagen Sie mir, was Sie suchen.</span><span data-en>Tell me what you are looking for.</span></h2>
-      <p class="lede"><span data-de>Ich melde mich innerhalb von 24 Stunden, in Ihrer Sprache.</span><span data-en>I reply within 24 hours, in your language.</span></p>
+      <h2><span data-de>Sagen Sie uns, <em>was Sie suchen.</em></span><span data-en>Tell us <em>what you are looking for.</em></span></h2>
+      <div class="wa-big">
+        <p><span data-de>Der schnellste Weg: eine Nachricht per WhatsApp. Antwort am selben Tag, in Ihrer Sprache.</span><span data-en>The fastest way: a WhatsApp message. Reply the same day, in your language.</span></p>
+        <div><a class="btn btn-solid" data-wa="general" href="#contact"><svg><use href="#wa"/></svg><span data-de>WhatsApp öffnen</span><span data-en>Open WhatsApp</span></a></div>
+      </div>
       <form class="form" id="lead-form" novalidate>
+        <p class="eyebrow" style="margin-top:8px"><span data-de>Oder Rückruf anfragen</span><span data-en>Or request a call back</span></p>
+        <input type="hidden" id="f-topic" name="topic" value="">
         <div class="form-row">
-          <div class="field"><label for="f-name"><span data-de>Name</span><span data-en>Name</span></label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
           <div class="field"><label for="f-phone"><span data-de>Telefon / WhatsApp</span><span data-en>Phone / WhatsApp</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
         </div>
         <div class="form-row">
           <div class="field"><label for="f-budget">Budget</label>
-            <select id="f-budget" name="budget">
+            <select id="f-budget" name="budget" required>
+              <option value="" selected>—</option>
               <option value="139-400">139.000 – 400.000 €</option>
               <option value="400-1200">400.000 – 1,2 Mio. €</option>
               <option value="1200-4000">1,2 – 4 Mio. €</option>
+              <option value="4000+">&gt; 4 Mio. €</option>
+              <option value="open">Noch offen / Still open</option>
             </select></div>
           <div class="field"><label for="f-lang"><span data-de>Sprache</span><span data-en>Language</span></label>
-            <select id="f-lang" name="lang"><option>Deutsch</option><option>English</option><option>Shqip</option></select></div>
+            <select id="f-lang" name="lang"><option>English</option><option>Deutsch</option><option>Shqip</option><option>العربية</option></select></div>
         </div>
         <div class="field"><label for="f-msg"><span data-de>Nachricht (optional)</span><span data-en>Message (optional)</span></label><textarea id="f-msg" name="msg" rows="3"></textarea></div>
-        <div><button class="btn btn-solid" type="submit"><span data-de>Rückruf anfragen</span><span data-en>Request a call back</span></button></div>
-        <div class="toast" id="toast" role="status"><span data-de>Danke. Im Entwurf wird noch nichts gesendet; die fertige Seite schreibt die Anfrage ins CRM und öffnet WhatsApp.</span><span data-en>Thank you. In this draft nothing is sent yet; the finished site writes the request to the CRM and opens WhatsApp.</span></div>
+        <div><button class="btn" type="submit"><span data-de>Rückruf anfragen</span><span data-en>Request a call back</span></button></div>
+        <div class="toast" id="toast" role="status"><span data-de>Danke. Im Entwurf wird noch nichts gesendet; die fertige Seite schreibt die Anfrage ins CRM und bestätigt per WhatsApp.</span><span data-en>Thank you. In this draft nothing is sent yet; the finished site writes the request to the CRM and confirms via WhatsApp.</span></div>
       </form>
     </div>
     <div class="direct">
-      <div class="line"><span>WhatsApp</span><b>+971 50 000 0000</b></div>
-      <div class="line"><span>E-Mail</span><b>hello@dreamdealsproperties.com</b></div>
+      <div class="line"><span>WhatsApp</span><b class="num">+971 50 000 0000</b></div>
+      <div class="line"><span>Instagram</span><b>@dream_deals_properties</b></div>
       <div class="line"><span>Dubai</span><b><span data-de>Business Bay · Termine nach Vereinbarung</span><span data-en>Business Bay · by appointment</span></b></div>
-      <div><a class="btn btn-wa" style="color:var(--white)" href="https://wa.me/971500000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4 5.3 5.3 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span data-de>Direkt schreiben</span><span data-en>Message directly</span></a></div>
+      <div class="line"><span><span data-de>Beratung</span><span data-en>Advice</span></span><b>English · Deutsch · Shqip</b></div>
     </div>
   </div>
 </section>
@@ -450,7 +602,7 @@
   </div>
 </footer>
 
-<a class="fab" href="https://wa.me/971500000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4 5.3 5.3 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<a class="fab" data-wa="general" href="#contact" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
 
 </div>
 
@@ -458,37 +610,80 @@
 (function(){
   var page=document.getElementById('page');
   var de=document.getElementById('lang-de'), en=document.getElementById('lang-en');
+  var WA_NUMBER='971500000000'; // Platzhalter, wird durch ihre Nummer ersetzt
+  var MSG={
+    de:{general:'Guten Tag, ich interessiere mich für Immobilien in Dubai und hätte gern eine Beratung.',
+        invest:'Guten Tag, ich interessiere mich für eine erste Investition in Dubai (bis 400.000 €). Bitte senden Sie mir den Investment-Guide.',
+        home:'Guten Tag, wir suchen ein Zuhause in Dubai (2 bis 3 Schlafzimmer). Ich hätte gern eine Besichtigung oder einen Video-Call.',
+        private:'Guten Tag, ich interessiere mich für Objekte ab 1,2 Mio. € und hätte gern eine private Beratung.',
+        'p-vision':'Guten Tag, bitte senden Sie mir Preisliste und Broschüre zu Tréppan Vision (DLRC).',
+        'p-prive':'Guten Tag, bitte senden Sie mir die Preisliste zu Tréppan Privé (Dubai Islands).',
+        'p-serenique':'Guten Tag, bitte senden Sie mir die Preisliste zu Tréppan Serenique (Dubai Islands).',
+        'p-hatimi':'Guten Tag, bitte senden Sie mir die Preisliste zu Hatimi Residences (Dubai Islands).',
+        'p-tower':'Guten Tag, bitte senden Sie mir die Preisliste zu Tréppan Tower (JVT).',
+        'p-maimoon':'Guten Tag, bitte senden Sie mir die Preisliste zu Maimoon Gardens (JVC).'},
+    en:{general:'Hello, I am interested in property in Dubai and would like some advice.',
+        invest:'Hello, I am interested in a first investment in Dubai (up to EUR 400,000). Please send me the investment guide.',
+        home:'Hello, we are looking for a home in Dubai (2 to 3 bedrooms). I would like a viewing or a video call.',
+        private:'Hello, I am interested in properties from EUR 1.2 million and would like a private consultation.',
+        'p-vision':'Hello, please send me the price list and brochure for Tréppan Vision (DLRC).',
+        'p-prive':'Hello, please send me the price list for Tréppan Privé (Dubai Islands).',
+        'p-serenique':'Hello, please send me the price list for Tréppan Serenique (Dubai Islands).',
+        'p-hatimi':'Hello, please send me the price list for Hatimi Residences (Dubai Islands).',
+        'p-tower':'Hello, please send me the price list for Tréppan Tower (JVT).',
+        'p-maimoon':'Hello, please send me the price list for Maimoon Gardens (JVC).'}
+  };
+  function applyWa(l){
+    document.querySelectorAll('[data-wa]').forEach(function(a){
+      var k=a.getAttribute('data-wa'); var m=(MSG[l]||MSG.de)[k]||MSG[l].general;
+      a.href='https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(m);
+      a.target='_blank'; a.rel='noopener';
+    });
+  }
   function setLang(l){
     page.setAttribute('data-lang',l);
     de.setAttribute('aria-pressed', l==='de'?'true':'false');
     en.setAttribute('aria-pressed', l==='en'?'true':'false');
-    document.documentElement.lang = l;
+    document.documentElement.lang=l;
+    applyWa(l);
     try{ localStorage.setItem('ddp-lang', l); }catch(e){}
   }
   de.addEventListener('click', function(){ setLang('de'); });
   en.addEventListener('click', function(){ setLang('en'); });
   var saved=null; try{ saved=localStorage.getItem('ddp-lang'); }catch(e){}
-  if(saved==='en' || (!saved && /^en/i.test(navigator.language||''))) setLang('en'); else setLang('de');
+  if(saved==='en' || (!saved && !/^de/i.test(navigator.language||''))) setLang('en'); else setLang('de');
 
-  // Budget preselect from the three paths
-  var map={invest:'139-400',home:'400-1200',private:'1200-4000'};
-  document.querySelectorAll('.path').forEach(function(a){
-    a.addEventListener('click', function(){ var v=map[a.getAttribute('data-path')]; if(v){ document.getElementById('f-budget').value=v; } });
-  });
+  // Project filter
+  var fb=document.querySelectorAll('.filters button'), cards=document.querySelectorAll('#project-grid .project');
+  fb.forEach(function(b){ b.addEventListener('click', function(){
+    fb.forEach(function(x){ x.setAttribute('aria-pressed','false'); }); b.setAttribute('aria-pressed','true');
+    var f=b.getAttribute('data-f');
+    cards.forEach(function(c){ c.hidden = !(f==='all' || c.getAttribute('data-c')===f); });
+  }); });
 
-  // Form: no backend in the draft
+  // Gallery arrows
+  var g=document.getElementById('gallery');
+  function step(dir){ var w=g.querySelector('figure').getBoundingClientRect().width+14; g.scrollBy({left:dir*w,behavior:'smooth'}); }
+  document.getElementById('gal-prev').addEventListener('click', function(){ step(-1); });
+  document.getElementById('gal-next').addEventListener('click', function(){ step(1); });
+
+  // Form: draft, no backend
   var form=document.getElementById('lead-form'), toast=document.getElementById('toast');
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    var name=document.getElementById('f-name'), phone=document.getElementById('f-phone');
+    var name=document.getElementById('f-name'), phone=document.getElementById('f-phone'), budget=document.getElementById('f-budget');
     if(!name.value.trim()){ name.focus(); return; }
     if(!phone.value.trim()){ phone.focus(); return; }
+    if(!budget.value){ budget.focus(); return; }
     toast.classList.add('show');
   });
 
-  // Hero video: play when possible, fall back to poster silently
-  var v=document.querySelector('.hero video');
-  if(v){ var p=v.play(); if(p && p.catch){ p.catch(function(){}); } }
+  // Hero video: mark playing so the Ken-Burns fallback hides; retry on first touch
+  var hero=document.querySelector('.hero'), v=hero.querySelector('video');
+  function tryPlay(){ var p=v.play(); if(p&&p.catch){ p.catch(function(){}); } }
+  v.addEventListener('playing', function(){ hero.classList.add('playing'); });
+  tryPlay();
+  ['touchstart','click','scroll'].forEach(function(ev){ window.addEventListener(ev, function once(){ if(v.paused) tryPlay(); window.removeEventListener(ev, once); }, {passive:true}); });
 })();
 </script>
 
